@@ -1,187 +1,75 @@
-<!DOCTYPE html>
-<html lang="en-GB" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mark Lally | Full Stack Developer & Creative Technologist</title>
-    <meta name="description" content="Digital portfolio of Mark Lally, featuring projects in financial dashboards, interactive simulations, and local business platforms. Built with modern web technologies.">
+<section class="grid grid-cols-1 md:grid-cols-6 md:grid-rows-3 gap-4">
     
-    <link rel="icon" type="image/png" href="https://github.com/jakmar86.png">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                    colors: {
-                        dark: '#050505',
-                        card: '#0f0f12',
-                        accent: '#6366f1',
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        body {
-            background-color: #050505;
-            color: #fafafa;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Modern Mesh Gradient Background */
-        .mesh-bg {
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.15) 0px, transparent 50%);
-        }
-
-        /* Custom Bento Card Hover */
-        .bento-card {
-            background: #0f0f12;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .bento-card:hover {
-            border-color: rgba(99, 102, 241, 0.4);
-            transform: scale(1.01);
-            box-shadow: 0 0 30px rgba(99, 102, 241, 0.1);
-        }
-
-        /* Border Beam Animation */
-        .bento-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%);
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-
-        .bento-card:hover::before {
-            opacity: 1;
-        }
-
-        .text-gradient {
-            background: linear-gradient(to bottom right, #fff 30%, rgba(255,255,255,0.5));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
-</head>
-<body class="mesh-bg min-h-screen">
-
-    <main class="container mx-auto px-6 py-20 max-w-7xl">
-        
-        <header class="max-w-3xl mb-24">
-            <div class="flex items-center gap-4 mb-8">
-                <img src="https://github.com/jakmar86.png" alt="Mark Lally" class="w-16 h-16 rounded-2xl grayscale hover:grayscale-0 transition-all duration-500">
-                <div class="h-[1px] w-12 bg-zinc-800"></div>
-                <span class="text-zinc-500 font-medium tracking-widest uppercase text-xs">Available for projects</span>
+    <a href="/FX-Consolidation-Dashboard/" class="bento-card md:col-span-4 md:row-span-1 rounded-3xl p-8 group">
+        <div class="flex flex-col h-full">
+            <div class="flex justify-between items-start mb-12">
+                <div class="p-4 bg-indigo-500/10 rounded-2xl text-indigo-400">
+                    <i class="fas fa-chart-line text-2xl"></i>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square text-zinc-700 group-hover:text-indigo-400 transition-colors"></i>
             </div>
-            
-            <h1 class="text-5xl md:text-7xl font-extrabold text-gradient tracking-tighter mb-6">
-                Mark Lally
-            </h1>
-            <p class="text-xl text-zinc-400 leading-relaxed mb-10">
-                Crafting high-performance digital experiences. Specialised in building tools that bridge the gap between <span class="text-white">complex data</span> and <span class="text-white">intuitive design</span>.
-            </p>
-
-            <div class="flex items-center gap-8">
-                <div class="flex gap-5 text-zinc-500">
-                    <a href="https://github.com/jakmar86" target="_blank" class="hover:text-white transition-colors" aria-label="GitHub"><i class="fab fa-github text-xl"></i></a>
-                    <a href="https://www.linkedin.com/in/mark-lally-426691138/" target="_blank" class="hover:text-white transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin text-xl"></i></a>
-                    <a href="mailto:markalally@gmail.com" class="hover:text-white transition-colors" aria-label="Email"><i class="fas fa-envelope text-xl"></i></a>
-                </div>
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-2">FX Consolidation Dashboard</h3>
+                <p class="text-zinc-500 max-w-md">Real-time currency analysis and financial data visualisation platform.</p>
             </div>
-        </header>
+        </div>
+    </a>
 
-        <section class="grid grid-cols-1 md:grid-cols-6 md:grid-rows-2 gap-4">
-            
-            <a href="/FX-Consolidation-Dashboard/" class="bento-card md:col-span-4 md:row-span-1 rounded-3xl p-8 group">
-                <div class="flex flex-col h-full">
-                    <div class="flex justify-between items-start mb-12">
-                        <div class="p-4 bg-indigo-500/10 rounded-2xl text-indigo-400">
-                            <i class="fas fa-chart-line text-2xl"></i>
-                        </div>
-                        <i class="fas fa-arrow-up-right-from-square text-zinc-700 group-hover:text-indigo-400 transition-colors"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-2">FX Consolidation Dashboard</h3>
-                        <p class="text-zinc-500 max-w-md">Real-time currency analysis and financial data visualisation platform.</p>
-                    </div>
-                </div>
-            </a>
+    <a href="https://www.artisanlichfield.co.uk" target="_blank" class="bento-card md:col-span-2 md:row-span-2 rounded-3xl p-8 group">
+        <div class="flex flex-col h-full">
+            <div class="p-4 bg-emerald-500/10 rounded-2xl text-emerald-400 w-fit mb-12">
+                <i class="fas fa-store text-2xl"></i>
+            </div>
+            <div class="mt-auto">
+                <h3 class="text-2xl font-bold text-white mb-2">Local Artisan Directory</h3>
+                <p class="text-zinc-500 mb-6">A community platform showcasing local creators in Lichfield.</p>
+                <span class="text-xs font-bold tracking-widest text-emerald-400 uppercase">Live Site →</span>
+            </div>
+        </div>
+    </a>
 
-            <a href="https://www.artisanlichfield.co.uk" target="_blank" class="bento-card md:col-span-2 md:row-span-2 rounded-3xl p-8 group">
-                <div class="flex flex-col h-full">
-                    <div class="p-4 bg-emerald-500/10 rounded-2xl text-emerald-400 w-fit mb-12">
-                        <i class="fas fa-store text-2xl"></i>
-                    </div>
-                    <div class="mt-auto">
-                        <h3 class="text-2xl font-bold text-white mb-2">Local Artisan Directory</h3>
-                        <p class="text-zinc-500 mb-6">A community platform showcasing the best creators in Lichfield.</p>
-                        <span class="text-xs font-bold tracking-widest text-emerald-400 uppercase">Live Site →</span>
-                    </div>
-                </div>
-            </a>
+    <a href="/bylally/" class="bento-card md:col-span-2 md:row-span-1 rounded-3xl p-8 group">
+        <div class="flex flex-col h-full">
+            <div class="p-4 bg-pink-500/10 rounded-2xl text-pink-400 w-fit mb-8">
+                <i class="fas fa-palette text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Colour Flipper</h3>
+            <p class="text-zinc-500 text-sm">Interactive DOM experiment for dynamic UI customisation.</p>
+        </div>
+    </a>
 
-            <a href="/sand-falling-webpage/" class="bento-card md:col-span-2 md:row-span-1 rounded-3xl p-8 group">
-                <div class="flex flex-col h-full">
-                    <div class="p-4 bg-amber-500/10 rounded-2xl text-amber-400 w-fit mb-8">
-                        <i class="fas fa-hourglass-half text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Sand Simulation</h3>
-                    <p class="text-zinc-500 text-sm">Particle physics engine built for the browser.</p>
-                </div>
-            </a>
+    <a href="/sand-falling-webpage/" class="bento-card md:col-span-2 md:row-span-1 rounded-3xl p-8 group">
+        <div class="flex flex-col h-full">
+            <div class="p-4 bg-amber-500/10 rounded-2xl text-amber-400 w-fit mb-8">
+                <i class="fas fa-hourglass-half text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Sand Simulation</h3>
+            <p class="text-zinc-500 text-sm">Particle physics engine built for the browser.</p>
+        </div>
+    </a>
 
-            <a href="/Rock-Paper-Scissors/" class="bento-card md:col-span-2 md:row-span-1 rounded-3xl p-8 group">
-                <div class="flex flex-col h-full">
-                    <div class="p-4 bg-rose-500/10 rounded-2xl text-rose-400 w-fit mb-8">
-                        <i class="fas fa-hand-scissors text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Logic Games</h3>
-                    <p class="text-zinc-500 text-sm">Practising core JavaScript via interactive game logic.</p>
-                </div>
-            </a>
+    <a href="/Rock-Paper-Scissors/" class="bento-card md:col-span-3 md:row-span-1 rounded-3xl p-8 group">
+        <div class="flex items-center gap-6">
+            <div class="p-4 bg-rose-500/10 rounded-2xl text-rose-400 w-fit">
+                <i class="fas fa-hand-scissors text-xl"></i>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white">Logic Games</h3>
+                <p class="text-zinc-500 text-sm">Classic JavaScript game logic.</p>
+            </div>
+        </div>
+    </a>
 
-        </section>
+    <a href="/marklally.co.uk/" class="bento-card md:col-span-3 md:row-span-1 rounded-3xl p-8 group">
+        <div class="flex items-center gap-6">
+            <div class="p-4 bg-blue-500/10 rounded-2xl text-blue-400 w-fit">
+                <i class="fas fa-globe text-xl"></i>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white">Lab & Experiments</h3>
+                <p class="text-zinc-500 text-sm">Archive of web development practice.</p>
+            </div>
+        </div>
+    </a>
 
-        <footer class="mt-32 pt-12 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-8">
-            <p class="text-zinc-500 text-sm">&copy; 2026 Mark Lally. Engineered with precision in the UK.</p>
-            
-            <a href="https://buymeacoffee.com/marklally" target="_blank" class="opacity-70 hover:opacity-100 transition-opacity">
-                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" class="h-10">
-            </a>
-        </footer>
-
-    </main>
-
-    <script>
-        // Interactive Mouse Spotlight Effect
-        document.querySelectorAll('.bento-card').forEach(card => {
-            card.onmousemove = e => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-            };
-        });
-    </script>
-</body>
-</html>
+</section>
